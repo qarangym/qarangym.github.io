@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBird</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel='icon' href='favicon.ico' type='image/x-icon' >
+    <style>
+      #video-background {
+        position: fixed;
+        right: 0;
+        bottom:0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+      }
+    
+      #signup-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 10px; }
+    </style>
+
+</head>
+<body style="background-color: #F2EAD3;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-color" style="background-color: #606C5D;opacity:0.9" >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="232231-200.png" alt="" style="height: 100px; width: 100px; color: #FFFBF5">
+        <span class="h1" style="color: #FFF4F4">BlackBird</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto" >
+          <li class="nav-item">
+            <a class="btn btn-lg nav-link" href="index.html" style="color:#FFF4F4">Магазин</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-lg nav-link" href="about.html" style="color:#FFF4F4">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn nav-link btn-lg" href="enter.html" style="color:#FFF4F4">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              Личный кабинет
+            </a>
+          </li>
+          
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+<video autoplay muted loop id="video-background">
+  <source src="Electric_Guitar_Dolly_Shot_3.mov" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+  <div id="signup-form">
+    <h2 id="form-title">Sign Up</h2>
+  <!-- registration -->
+    <form id="signup">
+      
+
+      <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+  <span id="nameError" style="color: red;"></span><br>
+
+  <label for="surname">Surname:</label><br>
+  <input type="text" id="surname" name="surname" required><br>
+  <span id="surnameError" style="color: red;"></span><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <span id="emailError" style="color: red;"></span><br>
+
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required><br>
+  <span id="passwordError" style="color: red;"></span><br>
+
+
+  <button type="button" id="swap-btn" onclick="swapForm()">Sign In</button>
+  <input type="submit" id="submitup" value="Submit" onclick="validateForm()">
+  <!-- log in -->
+    </form>
+    <form id="signin" style="display: none;">
+      <label for="email">Email:</label><br>
+      <input type="email" id="emailin" name="email" required><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" id="passwordin" name="password" required><br>
+      <span id="loginError" style="color: red;"></span><br>
+      
+      <input type="submit" id="signinf" value="Submit">
+      <button type="button" id="swap-btn" onclick="swapForm()">Sign Up</button>
+  </form>
+  
+</div>
+<script> 
+  function swapForm() {
+  const signUpForm = document.getElementById('signup');
+  const signInForm = document.getElementById('signin');
+  const formTitle = document.getElementById('form-title');
+  const swapBtn = document.getElementById('swap-btn');
+
+  if (signUpForm.style.display !== 'none') {
+      signUpForm.style.display = 'none';
+      signInForm.style.display = 'block';
+      formTitle.innerText = 'Sign In';
+      swapBtn.innerText = 'Sign Up';
+  } else {
+      signUpForm.style.display = 'block';
+      signInForm.style.display = 'none';
+      formTitle.innerText = 'Sign Up';
+      swapBtn.innerText = 'Sign In';
+  }
+}</script>
+<script src="signin.js"></script>
+        <script src="valid.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

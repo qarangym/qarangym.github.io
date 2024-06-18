@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBird</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel='icon' href='favicon.ico' type='image/x-icon' >
+
+</head>
+<body style="background-color: #F2EAD3;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-color" style="background-color: #606C5D;opacity:0.9" >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="232231-200.png" alt="" style="height: 100px; width: 100px; color: #FFFBF5">
+        <span class="h1" style="color: #FFF4F4">BlackBird</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto" >
+          <li class="nav-item">
+            <a class="btn btn-lg nav-link" href="index.html" style="color:#FFF4F4">Магазин</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-lg nav-link" href="about.html" style="color:#FFF4F4">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn nav-link btn-lg" href="enter.html" style="color:#FFF4F4">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              Личный кабинет
+            </a>
+          </li>
+          
+        
+        </ul><script src="firsttask1.js"></script>
+      </div>
+    </div>
+  </nav>
+
+    <div class="container mt-3">
+        <h2>Профиль</h2>
+        <form>
+            <div class="mb-3 col-md-4" >
+              <label for="name" class="form-label">Имя</label>
+              <input name="CName" type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+            </div>
+            
+            <div class="mb-3 col-md-4">
+              <label for="surname" class="form-label">Фамилия</label>
+              <input name="CSurname" type="text" class="form-control" id="surname" placeholder="Введите вашу фамилию">
+            </div>
+            <div class="mb-3 col-md-4">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Введите ваш email">
+            </div>
+            <div class="mb-3 col-md-4">
+              <img class="img-slider"src="232231-200.png" alt="">
+              
+            </div>
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="receiveNotifications">
+              <label class="form-check-label" for="receiveNotifications">Вы хотите получать уведомления о поступлении новых товаров?</label>
+            </div>
+          
+            
+            <button id="submitin" type="submit" class="btn btn-primary">Сохранить</button>
+          </form>
+        </div>
+        <script src="updatecab.js"></script>
+        <script src="signupin.js"></script>
+        <!--<script src="changesname.js"></script>-->
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
